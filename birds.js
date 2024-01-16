@@ -29,7 +29,7 @@ $(() => {
     let darius = new Animal("Darius");
     let ant = new Animal("Ant");
 
-    let animalArray = [echidna, darius, ant];
+    let animalArray = [cassowary, darius, ant];
 
     console.log(animalArray);
     $(animalArray).each((index, animal) => animal.createInfoElement());
