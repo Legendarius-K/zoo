@@ -24,6 +24,14 @@ body {
     cursor: pointer;
 }
 
+.side-bar li,
+.side-bar ul {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 4px 0;
+    text-transform: capitalize;
+}
+
 .main-content {
     display: flex;
     flex-grow: 1;
