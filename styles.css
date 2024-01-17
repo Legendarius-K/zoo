@@ -13,6 +13,25 @@ body {
     flex-direction: column;
 }
 
+.navigation {
+    margin: 0;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    list-style-type: none;
+    padding: 16px;
+
+}
+
+.navigation a {
+    background-color: green;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
 .side-bar {
     margin: 16 16 16 0;
     padding: 10px;
