@@ -26,10 +26,10 @@ $(() => {
     };
 
     let lizard = new Animal("Frill-necked-lizard", "20 years", "reptile", "Small insects and spiders", "When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth, unfurls the colorful, pleated skin flap that encircles its head, and hisses. If an attacker is unintimidated by these antics, the lizard simply turns tail, mouth and frill open, and bolts, legs splaying left and right. It continues its deliberate run without stopping or looking back until it reaches the safety of a tree.", "90 cm", "1 kg", "Northern Australia");
-    let darius = new Animal("Darius");
-    let ant = new Animal("Ant");
+    let python = new Animal("Python");
+    let iguana = new Animal("Iguana");
 
-    let animalArray = [lizard, darius, ant];
+    let animalArray = [lizard, python, iguana];
 
     console.log(animalArray);
     $(animalArray).each((index, animal) => animal.createInfoElement());
