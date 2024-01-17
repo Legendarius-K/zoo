@@ -31,6 +31,10 @@ $(() => {
 
 
     let animalArray = [lizard];
+    let python = new Animal("Python");
+    let iguana = new Animal("Iguana");
+
+    let animalArray = [lizard, python, iguana];
 
     console.log(animalArray);
     $(animalArray).each((index, animal) => animal.createInfoElement());

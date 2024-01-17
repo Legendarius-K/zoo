@@ -60,3 +60,9 @@ body {
     color: white;
     font-size: 3rem;
 }
+
+footer {
+    background-color: rgb(9, 46, 9);
+    color: #FFF;
+    text-align: center;
+}

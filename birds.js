@@ -31,6 +31,10 @@ $(() => {
 
 
     let animalArray = [cassowary];
+    let songbird = new Animal("Songbird");
+    let parrot = new Animal("Parrot");
+
+    let animalArray = [cassowary, songbird, parrot];
 
     console.log(animalArray);
     $(animalArray).each((index, animal) => animal.createInfoElement());
