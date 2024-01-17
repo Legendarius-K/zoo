@@ -59,6 +59,9 @@ body {
 .animal-info {
     display: none;
 }
+.hidden {
+    display: none;
+}
 
 .hero-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/vecteezy_four-lions-and-two-monkeys-sitting-on-a-rock-by-the-water_31529133.jpg');
@@ -85,3 +88,4 @@ footer {
     color: #FFF;
     text-align: center;
 }
+

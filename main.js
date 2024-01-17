@@ -59,9 +59,10 @@ $(() => {
     const appendAnimals = (animalGroup, animals) => {   
         $(".side-bar").append(`<h4>${animalGroup}</h4>`);
         let ul = $("<ul></ul>");
-        animals.forEach(animal => ul.append(`<li class="side-bar-animal">${animal.species}</li>`));
+        animals.forEach(animal => ul.append(`<li class=side-bar-animal>${animal.species}</li>`));
         $(".side-bar").append(ul);        
     };
+
 
     populateSidebar();
 
@@ -78,18 +79,17 @@ $(() => {
     }
 
     welcomeMessage();
-
-    const showSummary = () => {
-        $(".animal-info").append("Here goes the short summary")
-        console.log("list item clicked")
-    };
-
-    $(".navigation".li).on("click", showSummary);
-
+    
     $(`.side-bar-animal`).on("click", e => {
         let clickedSpecies = $(e.target).text();
-        $(`.animal-info.${clickedSpecies}`).toggle();
-        $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
-    })
+        $(".animal-info").fadeOut(1);
 
-}); 
+        if ($(`.animal-info.${clickedSpecies}`).is(":visible")) {
+            $(".welcome-message").removeClass("hidden");
+        } else {
+            $(`.animal-info.${clickedSpecies}`).toggle();
+            $(".welcome-message").addClass("hidden");
+        }
+    });
+             
+});
