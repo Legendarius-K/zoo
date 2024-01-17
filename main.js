@@ -15,6 +15,8 @@ $(() => {
                 <div class="animal-info ${this.species}">
                     <h3>${this.species}</h3>
                     <p>${this.summary}</p>
+                    <p>${this.food}</p>
+                    <p><a href="./${this.group}.html">${this.group}</a></p>
                 </div>
             `)
         }
