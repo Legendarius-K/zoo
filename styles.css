@@ -1,4 +1,4 @@
-:root { 
+:root {
     --navbar-footer-color: #174918; 
     --hamburger-menu-color:#9ba39b;
     --active-menu-color: #DB566C; 
@@ -125,7 +125,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 footer {
@@ -265,138 +265,6 @@ footer {
 
 }
 
-
-:root {
-    --primary-text-color: #fff;
-    --secondary-text-color: #1d1c1c;
-
-    --spacing-small: 8px;
-    --spacing-base: 16px;
-    --spacing-medium: 24px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100vh;
-}
-
-body {
-    margin: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.navigation {
-    margin: 0;
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: var(--spacing-base);
-    list-style-type: none;
-}
-
-.navigation a {
-    background-color: green;
-    color: white;
-    padding: 16px;
-    text-decoration: none;
-}
-
-.side-bar {
-    color: var(--second-text-color);
-    margin: 16 16 16 0;
-    padding: 10px;
-    background-color: beige;
-    border-radius: 10px;
-
-}
-
-.side-bar-animal {
-    cursor: pointer;
-}
-
-.side-bar li,
-.side-bar ul {
-    cursor: pointer;
-    list-style-type: none;
-    padding: 4px 0;
-    text-transform: capitalize;
-}
-
-
-
-.main-content {
-    color: var(--secondary-text-color);
-    display: flex;
-    flex: 1;
-}
-
-.welcome-message {
-    padding: var(--spacing-base);
-}
-
-.animal-info {
-    display: none;
-    height: 100%;
-    padding: var(--spacing-base);
-}
-
-.animal-info h3 {
-    text-transform: capitalize;
-}
-
-.animal-info a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.short-sum-img {
-    height: 100%;
-    width: 100%;
-}
-
-.img-container{
-    aspect-ratio: 1/1;
-    height: 30%;
-    border: 2px solid var(--secondary-text-color);
-}
-
-.hidden {
-    display: none;
-}
-
-.hero-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/vecteezy_four-lions-and-two-monkeys-sitting-on-a-rock-by-the-water_31529133.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 200px;
-    position: relative;
-}
-
-.hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-}
-
-footer {
-    background-color: rgb(9, 46, 9);
-    color: #FFF;
-    text-align: center;
-}
 
 @media screen and (min-height:600px) {
     .img-container {
