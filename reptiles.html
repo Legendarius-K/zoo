@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo</title>
-    <link rel="stylesheet." href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <script src="./jquery-3.7.1.min.js"></script>   
     <script src="./reptiles.js" defer></script>  
 </head>
 <body>
     <header>
-        <h1>The Reptiles of the Zoo</h1>
+        <div class="hero-img">
+            <div class="hero-text">
+                <p>The Fantastic Zoo!</p>
+            </div>
+        </div>
+        <input type="checkbox" id="menuToggle" class="hidden-checkbox">
+        <label for="menuToggle" class="mobile-menu__trigger"></label>
+        <nav class="nav-bar">
+            <ul class="navigation">
+                <li><a class="activepage" href="./index.html">Zoo Home</a></li>
+                <li><a href="./mammals.html">Mammals</a></li>
+                <li><a href="./birds.html">Birds</a></li>
+                <li><a href="./reptiles.html">Reptiles</a></li>
+            </ul>
+        </nav>            
     </header>
-
-    <div class="nav-bar">
-        <ul class="navigation">
-          <li><a href="./index.html">Zoo Home</a></li>
-          <li><a href="./mammals.html">Mammals</a></li>
-          <li><a href="#">Birds</a></li>
-          <li><a href="./reptiles.html">Reptiles</a></li>
-        </ul>
-    </div>
     <section class="main-content">
         <div class="side-bar">
 
         </div>
-        <div class="reptiles-info">
+        <div class="animal-info-container">
 
         </div>
     </section>
 
     <footer>
-        <p>Zoo Copyright 2024</p>
+        <p>Visit our amazing zoo at: Kakadu Highway, Australia</p>
+        <p>Fantastic Zoo est 1599</p>
     </footer>
 </body>
 </html>
