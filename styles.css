@@ -19,16 +19,16 @@ html {
 }
 
 body {
-    margin: 0;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    min-height: 100%;
 }
 
 .navigation {
-    margin: 0;
     background-color: green;
     display: flex;
+    margin: 0;
     align-items: center;
     justify-content: space-evenly;
     padding: var(--spacing-base);
@@ -43,12 +43,12 @@ body {
 }
 
 .side-bar {
+    background-color: beige;
+    border-radius: 10px;
     color: var(--second-text-color);
     margin: 16 16 16 0;
     padding: 10px;
-    background-color: beige;
-    border-radius: 10px;
-
+    text-transform: capitalize;
 }
 
 .side-bar-animal {
@@ -62,8 +62,6 @@ body {
     padding: 4px 0;
     text-transform: capitalize;
 }
-
-
 
 .main-content {
     color: var(--secondary-text-color);
