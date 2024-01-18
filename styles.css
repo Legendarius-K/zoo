@@ -1,4 +1,4 @@
-:root { 
+:root {
     --navbar-footer-color: #174918; 
     --hamburger-menu-color:#9ba39b;
     --active-menu-color: #DB566C; 
@@ -92,7 +92,7 @@ body {
     font-weight: 600;
 }
 
-.short-sum-img {
+.animal-img {
     height: 100%;
     width: 100%;
 }
@@ -125,7 +125,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 footer {
@@ -266,3 +266,8 @@ footer {
 }
 
 
+@media screen and (min-height:600px) {
+    .img-container {
+        height: 20%;
+    }
+}

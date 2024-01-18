@@ -14,7 +14,7 @@ $(() => {
             $(".animal-info-container").append(`
                 <div class="animal-info ${this.species}">
                 <h3>${this.species}</h3>
-                <div class="img-container"> <img class="short-sum-img" src="./img/${this.species}.jpg" heigth=100px width=100px alt="image of ${this.species}"></img></div>
+                <div class="img-container"> <img class="animal-img" src="./img/${this.species}.jpg" heigth=100px width=100px alt="image of ${this.species}"></img></div>
                     <p>${this.summary}</p>
                     <p>The ${this.species} likes to eat: ${this.food}</p>
                     <p>See more: <a href="./${this.group}.html">${this.group} </a></p>
