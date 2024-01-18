@@ -97,9 +97,10 @@ span {
 }
 
 .animal-img {
-    height: 100%;
+    height: auto;
     width: 100%;
     border: 2px solid var(--secondary-text-color);
+    aspect-ratio: 1/1;
 }
 
 
@@ -283,7 +284,6 @@ footer {
     .img-container-main {
         aspect-ratio: 1/1;
         width: 25%;
-        /* border: 2px solid var(--secondary-text-color); */
     }
     
     .info-flexbox {
@@ -293,6 +293,23 @@ footer {
     
     .short-info {
         margin-left: 15px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .img-container{
+        aspect-ratio: 1/1;
+        width: 25%;
+    }
+
+    .main-content {
+        padding-right: 20%;
+    }
+
+    .animal-info-container {
+        padding-left: 4%;
     }
 
 }
