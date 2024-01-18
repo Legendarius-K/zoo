@@ -25,22 +25,6 @@ body {
     min-height: 100%;
 }
 
-.navigation {
-    background-color: green;
-    display: flex;
-    margin: 0;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: var(--spacing-base);
-    list-style-type: none;
-}
-
-.navigation a {
-    background-color: green;
-    color: white;
-    text-decoration: none;
-}
-
 .side-bar {
     background-color: beige;
     border-radius: 10px;
@@ -49,7 +33,7 @@ body {
     position: sticky;
     top: 0;
     text-transform: capitalize;
-    height: 100%;
+    /* height: 100%; */
     width: fit-content;
 }
 
@@ -97,8 +81,10 @@ span {
 }
 
 .animal-img {
-    height: 100%;
+    height: auto;
     width: 100%;
+    border: 2px solid var(--secondary-text-color);
+    aspect-ratio: 1/1;
 }
 
 .img-container{
@@ -140,7 +126,6 @@ footer {
     padding: 8px;
 }
 
-/**/
 .mobile-menu-container {
     position: absolute;
     top: 10px;
@@ -188,18 +173,29 @@ footer {
 .a.activepage {
     color: var(--active-menu-color);
 }
+
 .navigation {
+
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: flex-start;
     list-style-type: none;
-    padding: 0;
+    /*padding: var(--spacing-base);*/
+    margin: 0 10px;
+    padding: 150px 0 0 0;
+    font-size: 2rem;
+
 }
 
 .navigation li {
     padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 100%;
+    margin: 15px;
+    text-align: center;
 }
 
 .navigation a {
@@ -207,11 +203,21 @@ footer {
     color: #333;
 }
 
+.active {
+    color: var(--active-menu-color);
+}
+
+.side-bar-animal {
+    transition: background-color 0.3s ease;
+}
+.side-bar-animal:hover {
+    color: var(--active-menu-color);
+}
+
 @media screen and (max-width: 333px) {
     .img-container {
         height: 12%;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -248,12 +254,22 @@ footer {
         padding: 8px;
     }
 
+    .navigation li {
+        border: unset;
+        padding: unset;
+        width: unset;
+    }
+
     .navigation a {
         background-color: var(--navbar-footer-color);
         color: white;
         text-decoration: none;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 1.2rem;
+    }
+
+    .nav-bar .active a {
+        color: var(--active-menu-color);
     }
 
     .navigation a::after {
@@ -278,5 +294,7 @@ footer {
         top: 60px;
     }
 
+
+    
 }
 
