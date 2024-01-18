@@ -50,8 +50,16 @@ $(() => {
         $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
     })
     
-    
-   
+    const welcomeMessage = () => {
+        $(".main-content").append (`
+        <div class=welcome-message>
+        <h1>Welcome to mammals page</h1>
+        <p>Here you can learn more about our different mammals we have at the moment.</p>
+        <p>Dig in deep and get to know the animals habitat, what they eat and other fun information about them!</p>
+        </div>
+        `)
+    }
+   welcomeMessage();
 });
    
 
