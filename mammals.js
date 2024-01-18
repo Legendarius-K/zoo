@@ -14,13 +14,13 @@ $(() => {
                 <div class="animal-info ${this.species}">
                     <h3>${this.species}</h3>
                     <div class="img-container"> <img class="animal-img" src="./img/${this.species}.jpg" heigth=100px width=100px alt="image of ${this.species}"></img></div>
-                    <p>${this.lifespan}</p>
-                    <p>${this.group}</p>
-                    <p>${this.food}</p>
+                    <p><span>Lifespan:</span> ${this.lifespan}</p>
+                    <p><span>Animal group:</span> ${this.group}</p>
+                    <p><span>Food:</span> ${this.food}</p>
                     <p>${this.description}</p>
-                    <p>${this.length}</p>
-                    <p>${this.weight}</p>
-                    <p>${this.found}</p>
+                    <p><span>Length:</span> ${this.length}</p>
+                    <p><span>Weight:</span> ${this.weight}</p>
+                    <p><span>Habitat:</span> ${this.found}</p>
                 </div>
             `)
         }
