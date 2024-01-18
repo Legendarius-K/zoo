@@ -44,10 +44,27 @@ $(() => {
 
     populateSidebar();
 
+    const welcomeMessage = () => {
+        $(".main-content").append (`
+        <div class=welcome-message>
+        <h1>Welcome to reptile page</h1>
+        <p>Here you can learn more about our different reptiles that we have at the moment.</p>
+        <p>Dig in deep and get to know the animals habitat, their differences and cool looking features! Just click on their name on sidebar to get to know them!</p>
+        </div>
+        `)
+    }
+    welcomeMessage();
+
     $(`.side-bar-animal`).on("click", e => {
         let clickedSpecies = $(e.target).text();
-        $(`.animal-info.${clickedSpecies}`).toggle();
-        $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
+        $(".animal-info").fadeOut(1);
+        
+        if ($(`.animal-info.${clickedSpecies}`).is(":visible")) {
+            $(".welcome-message").removeClass("hidden");
+        }else {
+            $(`.animal-info.${clickedSpecies}`).toggle();
+            $(".welcome-message").addClass("hidden");
+        }
     })
 
 });
