@@ -45,10 +45,10 @@ body {
     background-color: beige;
     border-radius: 10px;
     color: var(--second-text-color);
-    position: sticky;
     padding: 16px;
+    position: sticky;
+    top: 0;
     text-transform: capitalize;
-    top: 60px;
     height: 100%;
     width: fit-content;
 }
@@ -207,6 +207,12 @@ footer {
     color: #333;
 }
 
+@media screen and (max-width: 333px) {
+    .img-container {
+        height: 12%;
+    }
+
+}
 
 @media screen and (min-width: 768px) {
 
@@ -266,6 +272,10 @@ footer {
     .navigation a:hover::after {
         max-width: 100%;
         padding: 0 10px;
+    }
+
+    .side-bar {
+        top: 60px;
     }
 
 }
