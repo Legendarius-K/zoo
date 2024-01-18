@@ -50,6 +50,4 @@ $(() => {
         $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
     })
     
-    
-   
 });
