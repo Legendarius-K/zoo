@@ -11,18 +11,23 @@ $(() => {
         this.found = found,
         this.createInfoElement = function () {
             $(".animal-info-container").append(`
-                <div class="animal-info ${this.species}">
-                    <h3>${this.species}</h3>
+            <div class="animal-info ${this.species}">
+                <h3>${this.species}</h3>
+                <div class="info-flexbox">
                     <div class="img-container"> <img class="animal-img" src="./img/${this.species}.jpg" heigth=100px width=100px alt="image of ${this.species}"></img></div>
-                    <p><span>Lifespan:</span> ${this.lifespan}</p>
-                    <p><span>Animal group:</span> ${this.group}</p>
-                    <p><span>Food:</span> ${this.food}</p>
-                    <p>${this.description}</p>
-                    <p><span>Length:</span> ${this.length}</p>
-                    <p><span>Weight:</span> ${this.weight}</p>
-                    <p><span>Habitat:</span> ${this.found}</p>
+                    <div class="short-info">
+                        <p><span>Lifespan:</span> ${this.lifespan}</p>
+                        <p><span>Animal group:</span> ${this.group}</p>
+                        <p><span>Food:</span> ${this.food}</p>
+                        <p><span>Length:</span> ${this.length}</p>
+                        <p><span>Weight:</span> ${this.weight}</p>
+                        <p><span>Habitat:</span> ${this.found}</p>
+                    </div>
                 </div>
-            `)
+                <p>${this.description}</p>
+                
+            </div>
+        `)
         }
     };
 
@@ -44,10 +49,27 @@ $(() => {
 
     populateSidebar();
 
+    const welcomeMessage = () => {
+        $(".main-content").append (`
+        <div class=welcome-message>
+        <h1>Welcome to reptile page</h1>
+        <p>Here you can learn more about our different reptiles that we have at the moment.</p>
+        <p>Dig in deep and get to know the animals habitat, their differences and cool looking features! Just click on their name on sidebar to get to know them!</p>
+        </div>
+        `)
+    }
+    welcomeMessage();
+
     $(`.side-bar-animal`).on("click", e => {
         let clickedSpecies = $(e.target).text();
-        $(`.animal-info.${clickedSpecies}`).toggle();
-        $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
+        $(".animal-info").fadeOut(1);
+        
+        if ($(`.animal-info.${clickedSpecies}`).is(":visible")) {
+            $(".welcome-message").removeClass("hidden");
+        }else {
+            $(`.animal-info.${clickedSpecies}`).toggle();
+            $(".welcome-message").addClass("hidden");
+        }
     })
 
 });
