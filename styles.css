@@ -130,3 +130,8 @@ footer {
     text-align: center;
 }
 
+@media screen and (min-height:600px) {
+    .img-container {
+        height: 20%;
+    }
+}
