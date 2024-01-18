@@ -103,7 +103,13 @@ span {
 
 .img-container{
     aspect-ratio: 1/1;
-    height: 25%;
+    width: 40%;
+    border: 2px solid var(--secondary-text-color);
+}
+
+.img-container-main {
+    aspect-ratio: 1/1;
+    width: 25%;
     border: 2px solid var(--secondary-text-color);
 }
 
