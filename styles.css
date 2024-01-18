@@ -92,6 +92,10 @@ body {
     font-weight: 600;
 }
 
+span {
+    font-weight: bold;
+}
+
 .animal-img {
     height: 100%;
     width: 100%;
