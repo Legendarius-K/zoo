@@ -43,13 +43,28 @@ $(() => {
     };
 
     populateSidebar();
+    
+    const welcomeMessage = () => {
+        $(".main-content").append (`
+        <div class=welcome-message>
+        <h1>Welcome to the birds page</h1>
+        <p>Here you can explore and learn more about our different, beautiful and extraordinary birds.</p>
+        <p>What do the birds eat and how many species do we have. Some are very graceful, some looks like they are from another planet. Explore more and find interesting things about them by clicking on the sidebar!
+        </div>`)
+    }
+
+    welcomeMessage();
 
     $(`.side-bar-animal`).on("click", e => {
         let clickedSpecies = $(e.target).text();
-        $(`.animal-info.${clickedSpecies}`).toggle();
-        $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
-    })
-    
-    
-   
+        $(".animal-info").fadeOut(1);
+
+        if ($(`.animal-info.${clickedSpecies}`).is(":visible")) {
+            $(".welcome-message").removeClass("hidden");
+        } else {
+            $(`.animal-info.${clickedSpecies}`).toggle();
+            $(".welcome-message").addClass("hidden");
+        }
+    });
+
 });
