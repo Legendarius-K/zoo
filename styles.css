@@ -45,9 +45,12 @@ body {
     background-color: beige;
     border-radius: 10px;
     color: var(--second-text-color);
-    margin: 16 16 16 0;
-    padding: 10px;
+    position: sticky;
+    padding: 16px;
     text-transform: capitalize;
+    top: 60px;
+    height: 100%;
+    width: fit-content;
 }
 
 .side-bar-animal {
@@ -100,7 +103,7 @@ span {
 
 .img-container{
     aspect-ratio: 1/1;
-    height: 30%;
+    height: 25%;
     border: 2px solid var(--secondary-text-color);
 }
 
@@ -267,9 +270,3 @@ footer {
 
 }
 
-
-@media screen and (min-height:600px) {
-    .img-container {
-        height: 20%;
-    }
-}
