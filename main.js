@@ -93,4 +93,11 @@ $(() => {
         }
     });
              
+
+    const sideBarWidth = $(".side-bar").width();
+    console.log(sideBarWidth);
+
+    // Set the left margin of main-content based on side-bar width
+    $('.main-content').css("margin-left", sideBarWidth + 32);
+
 });

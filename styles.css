@@ -45,9 +45,12 @@ body {
     background-color: beige;
     border-radius: 10px;
     color: var(--second-text-color);
-    margin: 16 16 16 0;
-    padding: 10px;
+    /* margin: 16 16 16 0; */
+    padding: 16px;
     text-transform: capitalize;
+    position: sticky;
+    top: 60px;
+    width: fit-content;
 }
 
 .side-bar-animal {
@@ -66,6 +69,7 @@ body {
     color: var(--secondary-text-color);
     display: flex;
     flex: 1;
+    position
 }
 
 .welcome-message {
