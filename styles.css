@@ -1,3 +1,9 @@
+:root { 
+    --navbar-footer-color: #174918; 
+    --hamburger-menu-color:#9ba39b;
+    --active-menu-color: #DB566C; 
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,25 +17,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.navigation {
-    margin: 0;
-    background-color: green;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 8px;
-    list-style-type: none;
-    padding: 16px;
-
-}
-
-.navigation a {
-    background-color: green;
-    color: white;
-    padding: 16px;
-    text-decoration: none;
 }
 
 .side-bar {
@@ -68,6 +55,7 @@ body {
     max-width: 100%;
     height: 200px;
     position: relative;
+    z-index:10;
 }
 
 .hero-text {
@@ -77,11 +65,142 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 footer {
-    background-color: rgb(9, 46, 9);
+    background-color: var(--navbar-footer-color);
     color: #FFF;
     text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 8px;
+}
+
+/**/
+.mobile-menu-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+}
+
+.mobile-menu__trigger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    background-image: url('img/MariasBurger.svg');
+    background-size: cover;
+    width: 30px; 
+    height: 30px; 
+    top: 10px;
+    left: 10px;
+    z-index:40;
+}
+
+.nav-bar {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: var(--hamburger-menu-color);
+    z-index:30;
+}
+
+#menuToggle {
+    display: none;
+}
+
+#menuToggle:checked ~ .nav-bar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.navigation a:hover {
+    color: var(--active-menu-color);
+}
+
+.a.activepage {
+    color: var(--active-menu-color);
+}
+.navigation {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.navigation li {
+    padding: 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .hero-text {
+        font-size: 3rem;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+    .mobile-menu__trigger {
+        display: none;
+    }
+
+    .nav-bar {
+        position: relative;
+        clip-path: unset;
+        display:flex;
+    }
+
+    .navigation {
+        margin: 0;
+        background-color: var(--navbar-footer-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 1;
+        flex-direction: row;
+        padding: 8px;
+        list-style-type: none;
+        padding: 8px;
+    }
+
+    .navigation a {
+        background-color: var(--navbar-footer-color);
+        color: white;
+        text-decoration: none;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.2rem;
+    }
+
+    .navigation a::after {
+        border-bottom: 2px solid var(--active-menu-color);
+        content: '';
+        display: block;
+        left: 50%;
+        padding: 0 0 0;
+        position: relative;
+        max-width: 0%;
+        transform: translateX(-50%);
+        transition: max-width 0.5s;
+        width: 100%;       
+    }
+
+    .navigation a:hover::after {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
 }
