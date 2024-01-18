@@ -220,7 +220,8 @@ footer {
     }
 
     .nav-bar {
-        position: relative;
+        position: sticky;
+        top: 0;
         clip-path: unset;
         display:flex;
     }
