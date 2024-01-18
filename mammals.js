@@ -45,12 +45,6 @@ $(() => {
 
     populateSidebar();
 
-    $(`.side-bar-animal`).on("click", e => {
-        let clickedSpecies = $(e.target).text();
-        $(`.animal-info.${clickedSpecies}`).toggle();
-        $(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
-    })
-    
     const welcomeMessage = () => {
         $(".main-content").append (`
         <div class=welcome-message>
@@ -61,6 +55,22 @@ $(() => {
         `)
     }
    welcomeMessage();
+
+    $(`.side-bar-animal`).on("click", e => {
+        let clickedSpecies = $(e.target).text();
+        $(".animal-info").fadeOut(1);
+        //$(`.animal-info.${clickedSpecies}`).toggle();
+        //$(`.animal-info.${clickedSpecies}`).siblings().fadeOut(1);
+
+        if ($(`.animal-info.${clickedSpecies}`).is(":visible")) {
+            $(".welcome-message").removeClass("hidden");
+        } else {
+            $(`.animal-info.${clickedSpecies}`).toggle();
+            $(".welcome-message").addClass("hidden");
+        }
+    });
+    
+
 });
    
 
