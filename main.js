@@ -39,8 +39,6 @@ $(() => {
     let reptileArray = [lizard, python, iguana];
     let birdArray = [cassowary, songbird, parrot];
 
-    console.log("hello");
-
     const addAnimalInfo = (animalGroup) => {
         $(animalGroup).each((index, animal) => animal.createInfoElement());
     }
