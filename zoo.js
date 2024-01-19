@@ -5,4 +5,11 @@ $(() => {
         $(".side-bar-animal").removeClass("active");
         $(this).addClass("active");
     });
+
+    const toggleOverflow = () => {
+        const body = document.body;
+        body.style.overflow = menuToggle.checked ? "hidden" : "auto";
+    };
+
+    document.getElementById("menuToggle").addEventListener("click", toggleOverflow);
 });
