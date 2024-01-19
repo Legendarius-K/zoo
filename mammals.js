@@ -57,6 +57,7 @@ $(() => {
         </div>
         `)
     }
+
    welcomeMessage();
 
     $(`.side-bar-animal`).on("click", e => {
@@ -70,7 +71,6 @@ $(() => {
             $(".welcome-message").addClass("hidden");
         }
     });
-
 });
    
 

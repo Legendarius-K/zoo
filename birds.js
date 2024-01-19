@@ -25,7 +25,6 @@ $(() => {
                         </div>
                     </div>
                     <p>${this.description}</p>
-                    
                 </div>
             `)
         }
@@ -70,5 +69,4 @@ $(() => {
             $(".welcome-message").addClass("hidden");
         }
     });
-
 });
