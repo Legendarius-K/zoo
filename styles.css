@@ -1,7 +1,7 @@
 :root {
     --navbar-footer-color: #174918; 
     --hamburger-menu-color:#9ba39b;
-    --active-menu-color: #DB566C; 
+    --active-menu-color: #57a928; 
     --primary-text-color: #fff;
     --secondary-text-color: #1d1c1c;
 
@@ -33,7 +33,6 @@ body {
     position: sticky;
     top: 0;
     text-transform: capitalize;
-    /* height: 100%; */
     width: fit-content;
 }
 
@@ -86,8 +85,6 @@ span {
     border: 2px solid var(--secondary-text-color);
     aspect-ratio: 1/1;
 }
-
-
 
 .hidden {
     display: none;
@@ -178,7 +175,6 @@ footer {
     height: 100%;
     justify-content: flex-start;
     list-style-type: none;
-    /*padding: var(--spacing-base);*/
     margin: 0 10px;
     padding: 150px 0 0 0;
     font-size: 2rem;
