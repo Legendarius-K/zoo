@@ -2,8 +2,8 @@
 $(() => {
 
     $(".side-bar-animal").on("click", function() {
-        $(".side-bar-animal").removeClass("active");
-        $(this).addClass("active");
+        $(".side-bar-animal").not(this).removeClass("active");
+        $(this).toggleClass("active");
     });
 
     const toggleOverflow = () => {
